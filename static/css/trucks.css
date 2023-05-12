@@ -1,0 +1,41 @@
+.table-of-content{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.table-of-content a{
+    text-decoration: none;
+    color: darkslateblue;
+}
+
+.table-of-content a:hover{
+    text-decoration: none;
+    color: purple;
+}
+
+.trucks{
+    margin: 50px;
+}
+
+.trucks table {
+    text-align: left;
+    border-collapse: separate;
+    border-spacing: 5px;
+    background: #b4ffe8;
+    color: #252525;
+    border: 16px solid #b4ffe8;
+    border-radius: 20px;
+}
+.trucks table th {
+    font-size: 18px;
+    padding: 10px;
+}
+.trucks table td {
+    font-size: 18px;
+    background: #34e3ad;
+    padding: 10px;
+}
+
+.model-form {
+    padding: 20px;
+}

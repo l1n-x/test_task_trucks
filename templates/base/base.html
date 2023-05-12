@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="ru"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="ru"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang="ru"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ru"> <!--<![endif]-->
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        <meta name="robots" content="noindex, nofollow"/>
+        <link rel="stylesheet" type="text/css" href="{% static 'css/trucks.css' %}?v=1">
+    </head>
+
+    <body>
+        {% block content %}{% endblock content %}
+        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/trucks.js' %}?v=1"></script>
+    </body>
+
+</html>

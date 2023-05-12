@@ -1,0 +1,10 @@
+{% extends 'base/base.html' %}
+
+{% block title %}Главная{% endblock title %}
+
+{% block content %}
+    <div class="table-of-content">
+        <h3>Меню</h3>
+        1. <a href="{% url 'trucks:trucks' %}">Управление грузовиками</a>
+    </div>
+{% endblock content %}

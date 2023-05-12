@@ -1,0 +1,48 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block title %}Управление грузоперевозками{% endblock title %}
+
+{% block extra_css %}
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="trucks">
+        <div class="model-form">
+            <label for="model-select">Модель:</label>
+            <select name="model" id="model-select">
+                <option value="">Все</option>
+                {% for truck_model in truck_models %}
+                    <option value="{{ truck_model.0 }}">{{ truck_model.1 }}</option>
+                {% endfor %}
+            </select>
+            <button id="apply">Применить</button>
+        </div>
+    
+        <table>
+            <thead>
+                <tr>
+                    <th>Бортовой №</th>
+                    <th>Модель</th>
+                    <th>Грузоподъемность (кг)</th>
+                    <th>Текущий вес (кг)</th>
+                    <th>Перегруз (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for trip in truck_trips %}
+                    <tr>
+                        <td>{{ trip.truck.number }}</td>
+                        <td>{{ trip.truck.model.name }}</td>
+                        <td>{{ trip.truck.model.weight_capacity }}</td>
+                        <td>{{ trip.current_weight }}</td>
+                        <td>{{ trip.overload }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}
+
+{% block extra_js %}
+{% endblock extra_js %}
